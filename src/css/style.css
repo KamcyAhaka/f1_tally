@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary_1: #631878;
+  --primary_2: #7E2199;
+  --primary_3: #9C29B7;
+  --secondary: #F3F5FB;
+  --white: #FFFFFF;
+  --grey: #DEDEE0;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.page-controls {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  padding: 1em;
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  background-color: var(--secondary);
+  border-radius: 6px;
+  overflow: hidden;
+  padding: .75em 1em;
+}
+
+.search-input-container .fa-magnifying-glass {
+  color: var(--grey);
+}
+
+.search-input-container input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.type-of-stats-select {
+  padding: .5em 1em;
+  background-color: transparent;
+  border: 2px solid var(--grey);
+  border-radius: 6px;
+  outline: none;
+  /* -moz-appearance:none; Remove the default arrow icon in Firefox */
+  /* -webkit-appearance:none; Remove the default arrow icon in Safari and Chrome */
+  /* appearance:none;  */
+  position: relative;
+  display: block;
+}
+
+.type-of-stats-select:after {
+  /* content: url('/svg/caret_down.svg'); */
+  content: '\f078';
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* transform: translateY(-50%); */
+  pointer-events: none;
+}
+
+.call-to-action {
+  padding: .5em 1em;
+  background-color: var(--primary_1);
+  border: 2px solid var(--primary_3);
+  color: var(--white);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.main-table {
+  border-spacing: 0;
+  width: 100vw;
+  max-width: 95%;
+  margin: 1em auto;
+  border-collapse: collapse;
+}
+
+.main-table thead {
+  border: none;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.main-table table tr {
+  border-bottom: 3px solid #ddd;
+  display: block;
+  margin-bottom: .625em;
+}
+
+.main-table th {
+  padding: .5em 1em;
+}
+
+.main-table tbody td {
+  text-align: right;
+  border-bottom: 1px solid #ddd;
+  display: block;
+  padding: .625em;
+}
+
+.main-table td::before {
+  /*
+  * aria-label has no advantage, it won't be read inside a table
+  content: attr(aria-label);
+  */
+  content: attr(data-label);
+  float: left;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.driver-detail-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.driver-detail-section h1 {
+  text-align: center;
+}
+
+.driver-detail-section img {
+  width: 100px;
+  aspect-ratio: 1;
+  border: 1px solid black;
+}
+
+.details-container {
+  display: grid;
+  width: 90%;
+  max-width: 1360px;
+  margin: 0 auto;
+  grid-template-columns: auto 400px 1fr;
+  grid-auto-rows: minmax(1px, 150px);
+}
+
+.details-container .container--left {
+  text-align: center;
+}
+
+.stats-container {
+  list-style: none;
+}
+
+.quotes-wrapper {
+  grid-column: span 2;
+  border: 1px solid black;
+}
+
+.related-drivers-section {
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+}
+
+@media screen and (min-width: 1000px) {
+  .main-table thead {
+    border: none;
+    clip: unset;
+    height: unset;
+    margin: unset;
+    overflow: unset;
+    padding: unset;
+    position: unset;
+    width: unset;
+  }
+
+  .main-table thead tr {
+    background-color: var(--secondary);
+  }
+
+  .main-table thead th {
+    border-inline: .1px solid var(--white);
+  }
+
+  .main-table tbody td {
+    display: table-cell;
+    text-align: center;
+  }
+
+  .main-table td::before {
+    display: none;
+  }
+
+  .details-container {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .quotes-wrapper {
+    grid-column: span 1;
+  }
+}

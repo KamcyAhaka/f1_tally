@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link
+    rel="stylesheet"
+    href="/css/style.css"
+  >
+  <title>F1 Tally || F1 Stats Unlike Any Other</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="#">F1 Tally</a>
+    </nav>
+  </header>
+  <main>
+    <section class="page-controls">
+      <div class="search-input-container">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input
+          type="search"
+          name="searchBox"
+          id="searchBox"
+          placeholder="Search..."
+          aria-placeholder="Search for stat"
+        >
+      </div>
+      <select
+        name="typeOfStatsSelect"
+        id="typeOfStatsSelect"
+        class="type-of-stats-select"
+      >
+        <option value="Races">Races</option>
+        <option value="Drivers">Drivers</option>
+        <option value="Teams">Teams</option>
+        <option value="Circuits">Circuits</option>
+        <option value="Seasons">Seasons</option>
+      </select>
+      <button class="call-to-action">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        Search
+      </button>
+    </section>
+    <section id="table-section">
+      <table class="main-table">
+        <thead>
+          <tr>
+            <th scope="col">
+              <i class="fa-solid fa-minus"></i>
+            </th>
+            <th scope="col">Date</th>
+            <th scope="col">Name</th>
+            <th scope="col">Location</th>
+            <th scope="col">Winner</th>
+            <th scope="col">1st Runner Up</th>
+            <th scope="col">2nd Runner Up</th>
+            <th scope="col">Fastest Lap</th>
+            <th scope="col">No of Finishers</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              colspan="1"
+              rowspan="1"
+            >
+              <i class="fa-solid fa-plus"></i>
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+              data-label="Date"
+            >
+              08/10/2024
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+              data-label="Name"
+            >
+              ACME
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+              data-label="Location"
+            >
+              City, Country
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+              data-label="Winner"
+            >
+              Max Verstappen
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+              data-label="First Runner Up"
+            >
+              Lando Norris
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+              data-label="Second Runner Up"
+            >
+              George Russell
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+              data-label="Fastest Lap"
+            >
+              01:34:3330
+            </td>
+            <td
+              colspan="1"
+              rowspan="1"
+              data-label="No. Of Finishers"
+            >
+              17
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+
+</html>
